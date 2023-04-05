@@ -11,7 +11,6 @@
 
 body {
     background-color: #1a1a1a;
-    height: 1080px;
     overflow: hidden;
     min-height: 100vh;
     color: aliceblue;
@@ -28,26 +27,44 @@ a {
    color: aliceblue;
 }
 
-.navcontainer a:hover {
-    text-decoration: underline;
-}
-
 nav {
-   margin: 2px;
-   margin-top: 15px;
-}
-
-nav ul {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-   align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 nav ul li {
-    display: inline-block;
+    
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-left: 20px;
+    font-family: Mintreg;
+}
+
+nav ul li a {
     margin-right: 25px;
-    margin-top: -13px;
+    margin-top: 7px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline white 2px;
+    color: #615f5f;
+    transition: 0.5s;
+}
+
+nav ul li .user {
+    margin-right: 18px;
+    margin-left: 20px;
+    width: 22;
+    height: 22;
+    cursor: pointer;
+}
+
+nav svg {
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .svg {
@@ -66,39 +83,73 @@ nav ul li {
     margin-top: -25px;
 }
 
+.mid {
+    width: 18%;
+}
+
 .container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 150px;
-    border-color: aqua;
+    margin-top: 160px;
+    /*border: 1px solid red;*/
 }
-/* @media screen and (max-width: 1280px) {
-    #container_1 {
+@media screen and (max-width: 1280px) {
+    #container {
         width: 800px;
-        border: 1px solid blue;
     }
 
-    #container_1 .intro{
+    #container .mid{
         font-size: 2em;
     }
     
-    #container_1 #premiertrait{
+    #container .form-group{
         width: 12%;
     }
     
-    #container_1 .texte{
+    container .buttons {
         font-size: 1.2em;
     }
-} */
-
-.container .logomid {
+}
+.container .form-group {
     display: flex;
     flex-direction: column;
-    width: 18%;
+    width: 55%;
 }
 
-.txt {
+.container .form-group input {
+    width: 100%;
+    margin-top: 17px;
+    color:aliceblue;
+    padding: 12px;
+    border: 1px solid #5f6368;
+    border-radius: 40px;
+    outline: none;
+    background-color: #1a1a1a
+}
+
+.container .form-group input:hover, 
+.container .form-group input:focus {
+    transition: 0.5s;
+    background-color: #5f6368;
+}
+
+.container .form-group label .image {
+    float: right;
+    margin-top: -35px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.container .form-group label .micro{
+    float: left;
+    margin-top: -33px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+/*.txt {
     font-family: "Mintreg";
     background-color: #1a1a1a;
     color: aliceblue;
@@ -111,7 +162,7 @@ nav ul li {
     color: aliceblue;
 }
 
-.form-group {
+/*.form-group {
     padding: 4px;
     width: 70%;
     margin-top: 10px;
@@ -120,14 +171,7 @@ nav ul li {
     outline: none;
     background-color: #1a1a1a;
     border: 2px solid #5f6368;
-}
-
-.form-group:hover {
-    box-shadow:  -1px 19px 2px rgba(184,184,184,1);
-    box-shadow: -8px -1px 19px 2px rgba(184,184,184,1);
-    box-shadow: -8px -1px 19px 2px rgba(184,184,184,1);
-    border:none;
-}
+}*/
 
 .form-group .camera {
     cursor: pointer;
@@ -145,6 +189,7 @@ nav ul li {
     margin-right: 15px;
     color: white;
     background-color: #5f6368;
+    transition: 0.3s;
 }
 
 .buttons button:hover {
