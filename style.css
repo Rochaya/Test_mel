@@ -1,6 +1,6 @@
 @font-face{
         font-family: "Mintreg";
-        src: url(Fonts/MintSansRegular.otf);
+        src: url(fonts/MintSansRegular.otf);
 }
 
 * {
@@ -44,6 +44,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: Mintreg;
     margin-right: 25px;
     margin-top: 7px;
 }
